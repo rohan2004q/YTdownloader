@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Premium Downloader</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <i class="fab fa-youtube logo-icon"></i>
+                <h1 class="logo-text">YT Premium<span>Downloader</span></h1>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title animate-pop-in">Download YouTube Videos <span>Without Limits</span></h2>
+                    <p class="hero-subtitle animate-pop-in">Fast, secure, and high-quality downloads in multiple formats</p>
+                    
+                    <div class="search-container animate-pop-in">
+                        <input type="text" id="video-url" placeholder="Paste YouTube URL here..." autocomplete="off">
+                        <button id="fetch-btn" class="btn-primary">
+                            <i class="fas fa-search"></i> Fetch Video
+                        </button>
+                    </div>
+                    
+                    <div class="features animate-pop-in">
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Super Fast</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>No Ads</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-infinity"></i>
+                            <span>Unlimited</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image animate-slide-in">
+                    <img src="assets/images/video-download.svg" alt="Video Download Illustration">
+                </div>
+            </section>
+
+            <section class="video-info-section hidden" id="video-info">
+                <div class="video-thumbnail">
+                    <img id="thumbnail-img" src="" alt="Video Thumbnail">
+                    <div class="thumbnail-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="video-details">
+                    <h3 id="video-title"></h3>
+                    <div class="video-meta">
+                        <span id="video-duration"></span>
+                        <span id="video-views"></span>
+                    </div>
+                    <div class="download-options">
+                        <h4>Download Options:</h4>
+                        <div class="format-buttons" id="format-buttons">
+                            <!-- Format buttons will be added here dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="how-it-works">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-link step-icon"></i>
+                        <h3>Copy URL</h3>
+                        <p>Copy the YouTube video URL from your browser</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <i class="fas fa-paste step-icon"></i>
+                        <h3>Paste Here</h3>
+                        <p>Paste the URL in the input field above</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <i class="fas fa-download step-icon"></i>
+                        <h3>Download</h3>
+                        <p>Choose your preferred format and quality</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 YT Premium Downloader. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="loading-overlay hidden" id="loading">
+        <div class="loading-spinner"></div>
+        <div class="progress-bar"></div>
+        <p class="loading-text">Processing your request</p>
+    </div>
+
+    <div class="notification hidden" id="notification"></div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
